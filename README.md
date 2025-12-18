@@ -30,6 +30,20 @@ The interface is built with a modern, dark-themed Tkinter GUI and packaged as a 
 * **Offline Capable:** Runs locally with no internet connection required; data privacy is ensured.
 * **Portable:** Deployed as a single `.exe` file (Windows) requiring no Python installation.
 
+## 📂 Project Structure
+
+```text
+PetVision-AI/
+├── models/
+│   └── cat_dog_model.onnx      # Optimized inference model
+├── app_onnx.py                 # Main styled GUI application
+├── test_onnx.py                # Standalone script for model validation
+├── train.py                    # PyTorch training script (source)
+├── requirements.txt            # Project dependencies
+├── app_icon.ico                # Application branding icon
+├── screenshot.png              # Preview image for README
+└── .gitignore                  # Prevents uploading build/temp files
+
 ## 🛠️ Step-by-Step Implementation
 
 This project was built in five distinct engineering stages:
