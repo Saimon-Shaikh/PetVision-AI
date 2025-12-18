@@ -18,7 +18,7 @@ The interface is built with a modern, dark-themed Tkinter GUI and packaged as a 
 
 ## 📸 Visuals
 
-![App Interface](https://via.placeholder.com/800x500/212121/FFFFFF?text=PetVision-AI+Interface+Screenshot)
+<img width="626" height="914" alt="Image" src="https://github.com/user-attachments/assets/680d7341-6881-41da-aa04-edfaf1f96e7d" /> <img width="626" height="914" alt="Image" src="https://github.com/user-attachments/assets/f50e1b0b-7a8f-4641-b041-4e174b9de3ab" />
 *The modern, dark-mode interface allows users to upload images and get instant predictions with confidence scores.*
 
 ## ✨ Key Features
