@@ -68,7 +68,7 @@ If you want to run the source code or train the model yourself:
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/PetVision-AI.git](https://github.com/yourusername/PetVision-AI.git)
+    git clone [https://github.com/Saimon-Shaikh/PetVision-AI.git](https://github.com/Saimon-Shaikh/PetVision-AI.git)
     cd PetVision-AI
     ```
 
