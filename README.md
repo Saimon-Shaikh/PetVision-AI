@@ -33,16 +33,28 @@ The interface is built with a modern, dark-themed Tkinter GUI and packaged as a 
 ## 📂 Project Structure
 
 ```text
-PetVision-AI/
+E:/Python/cat_dog_classifier/
+├──data/
+|   └── train
+|       └── cats
+|       └── dogs
+|   └── validation
+|       └── cats
+|       └── dogs
 ├── models/
-│   └── cat_dog_model.onnx      # Optimized inference model
-├── app_onnx.py                 # Main styled GUI application
-├── test_onnx.py                # Standalone script for model validation
-├── train.py                    # PyTorch training script (source)
-├── requirements.txt            # Project dependencies
-├── app_icon.ico                # Application branding icon
-├── screenshot.png              # Preview image for README
-└── .gitignore                  # Prevents uploading build/temp files
+│   └── cat_dog_model.onnx      # The optimized brain of the app
+├── app_onnx.py                 # The styled, modern GUI application
+├── test_onnx.py                # Script to verify model accuracy (Double-precision fix)
+├── app.py                      # Original PyTorch-based GUI (Legacy)
+├── train_model.py              # The script used to train the CNN
+├── export_onnx.py              # Script that converted .pth to .onnx
+├── app_icon.ico                # Custom icon for the application
+├── requirements.txt            # Necessary libraries (onnxruntime, PIL, etc.)
+├── .gitignore                  # Instructs Git to ignore 'build' and 'dist' folders
+└── dist/                       # Created by PyInstaller (Contains the .exe)
+    └── PetClassifierAI/        # The final shareable folder
+        └── PetClassifierAI.exe # The standalone Windows application       
+```
 
 ## 🛠️ Step-by-Step Implementation
 
