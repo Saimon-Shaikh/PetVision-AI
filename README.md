@@ -80,18 +80,22 @@ E:/Python/cat_dog_classifier/
 
 **app_icon.ico**: The visual asset used for branding the application window and the executable file icon.
 
-
 ## 🔄 Working Flow
 The interaction between these files follows a production-ready "Training-to-Deployment" pipeline:
 
-    1. Preparation: train_model.py processes raw data to produce a high-accuracy .pth model.
+```mermaid
+graph LR
+    A[📂 Raw Data] -->|train_model.py| B(🧠 PyTorch Model .pth)
+    B -->|export_onnx.py| C(⚡ ONNX Model)
+    C -->|Load| D[💻 GUI App]
+    D -->|PyInstaller| E[📦 Final Exe]
     
-    2. Optimization: export_onnx.py converts the model to models/cat_dog_model.onnx.
-    
-    3. Inference: app_onnx.py loads the model and provides the user interface for real-time predictions.
-    
-    4. Bundling: PyInstaller packages the scripts and assets into the dist/ folder for end-user distribution.
-    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bfb,stroke:#333,stroke-width:2px
+```
+---
+
 
 ## 🛠️ Step-by-Step Implementation
 
