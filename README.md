@@ -34,15 +34,19 @@ The interface is built with a modern, dark-themed Tkinter GUI and packaged as a 
 
 ```text
 E:/Python/cat_dog_classifier/
-├──data/
-|   └── train
-|       └── cats
-|       └── dogs
-|   └── validation
+├──data/                        
+|   └── train                  # The learning dataset (Cats & Dogs)
+|   |   └── cats
+|   |   └── dogs
+|   └── validation             # The testing dataset to verify accuracy
 |       └── cats
 |       └── dogs
 ├── models/
 │   └── cat_dog_model.onnx      # The optimized brain of the app
+├── src
+|   └── data_loader.py          # Prepares and augments image datasets
+|   └── model_builder.py        # The Blueprint: Defines the CNN architecture
+|   └── trainer.py              # The Engine: Executes the training process
 ├── app_onnx.py                 # The styled, modern GUI application
 ├── test_onnx.py                # Script to verify model accuracy (Double-precision fix)
 ├── app.py                      # Original PyTorch-based GUI (Legacy)
