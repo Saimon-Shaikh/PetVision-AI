@@ -44,7 +44,7 @@ E:/Python/cat_dog_classifier/
 |       └── dogs
 ├──dist/                        # The "Final Product" folder. This is what you zip and send to users so they can run your AI app.
 |    └── PetClassifierAI/       # The final shareable folder
-|        └── PetClassifierAI    # Final Product: The standalone Windows application
+|        └── PetClassifierAI.exe # Final Product: The standalone Windows application
 ├── models/
 │   └── cat_dog_model.onnx      # The optimized brain of the app
 ├── src/
