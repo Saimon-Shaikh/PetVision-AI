@@ -34,16 +34,20 @@ The interface is built with a modern, dark-themed Tkinter GUI and packaged as a 
 
 ```text
 E:/Python/cat_dog_classifier/
+├──build/                       # Temporary directory used by PyInstaller to store log files and intermediate work files during the EXE creation process.
 ├──data/                        
-|   └── train                  # The learning dataset (Cats & Dogs)
+|   └── train/                  # The learning dataset (Cats & Dogs)
 |   |   └── cats
 |   |   └── dogs
-|   └── validation             # The testing dataset to verify accuracy
+|   └── validation/             # The testing dataset to verify accuracy
 |       └── cats
 |       └── dogs
+├──dist/                        # The "Final Product" folder. This is what you zip and send to users so they can run your AI app.
+|    └── PetClassifierAI/       # The final shareable folder
+|        └── PetClassifierAI    # Final Product: The standalone Windows application
 ├── models/
 │   └── cat_dog_model.onnx      # The optimized brain of the app
-├── src
+├── src/
 |   └── data_loader.py          # Prepares and augments image datasets
 |   └── model_builder.py        # The Blueprint: Defines the CNN architecture
 |   └── trainer.py              # The Engine: Executes the training process
@@ -53,11 +57,7 @@ E:/Python/cat_dog_classifier/
 ├── train_model.py              # The script used to train the CNN
 ├── export_onnx.py              # Script that converted .pth to .onnx
 ├── app_icon.ico                # Custom icon for the application
-├── requirements.txt            # Necessary libraries (onnxruntime, PIL, etc.)
-├── .gitignore                  # Instructs Git to ignore 'build' and 'dist' folders
-└── dist/                       # Created by PyInstaller (Contains the .exe)
-    └── PetClassifierAI/        # The final shareable folder
-        └── PetClassifierAI.exe # The standalone Windows application       
+└── requirements.txt            # Necessary libraries (onnxruntime, PIL, etc.)    
 ```
 
 ## 📂 File & Folder Dictionary
