@@ -1,0 +1,2 @@
+*.mov filter=lfs diff=lfs merge=lfs -text
+dist/PetClassifierAI/_internal/torch/lib/torch_cpu.dll filter=lfs diff=lfs merge=lfs -text

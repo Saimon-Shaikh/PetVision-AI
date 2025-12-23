@@ -1,0 +1,59 @@
+PETVISION-AI: PURE PYTHON (PYTORCH) WORKFLOW
+============================================
+
+Use this guide if you want to run the application directly from the source code 
+using PyTorch, without converting to ONNX or building an executable.
+
+PREREQUISITES
+-------------
+1. Python 3.8 or newer installed.
+2. A powerful CPU or NVIDIA GPU (Recommended for training).
+
+STEP 1: INSTALL HEAVY DEPENDENCIES
+----------------------------------
+Since you are avoiding ONNX, you must install the full PyTorch library.
+Run this command in your terminal:
+
+    pip install torch torchvision torchaudio
+    pip install Pillow numpy
+
+(Note: The standard 'requirements.txt' in this repo only contains lightweight 
+libraries. For this workflow, you need the full PyTorch suite.)
+
+STEP 2: PREPARE DATASET
+-----------------------
+Ensure your folders are set up exactly like this:
+    data/
+    ├── train/
+    │   ├── cats/  (Put cat training images here)
+    │   └── dogs/  (Put dog training images here)
+    └── validation/
+        ├── cats/  (Put cat testing images here)
+        └── dogs/  (Put dog testing images here)
+
+
+STEP 3: MAIN THE MODEL (PyTorch Format)
+-------------
+File: main.py
+Command: python main.py
+    - Acts as the central hub to launch the application. 
+    - Automatically checks for required model files before starting. 
+    - Initializes and runs the primary GUI.
+    - Loads images from the 'data/' folder.
+    - Trains the CNN for 10 epochs.
+    - Saves the model as 'cat_dog_model.pth'.
+Note: Use this file as the single start command to ensure all project components are loaded correctly.his process may take time depending on your hardware.
+
+STEP 4: RUN THE APPLICATION
+---------------------------
+File: app.py (Legacy Version)
+Command: python app.py
+Action:
+    - Opens the GUI.
+    - Loads 'cat_dog_model.pth' directly using PyTorch.
+    - Performs inference using the PyTorch engine.
+
+-------------------------------------------------------
+SUMMARY OF DIFFERENCES
+- ONNX Path: Faster, lightweight, requires 'export_onnx.py'.
+- This Path: Slower, requires 'torch' installed, uses 'app.py'.

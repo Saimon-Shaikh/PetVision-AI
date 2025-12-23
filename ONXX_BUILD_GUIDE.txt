@@ -1,0 +1,41 @@
+PETVISION-AI: EXECUTION ROADMAP
+===============================
+
+Follow these steps in order to move from raw data to a finished Windows Application.
+
+STEP 0: Data Preparation
+Action: Create a 'data' folder and organize your images into these subfolders:
+        - data/train/cats/
+        - data/train/dogs/
+        - data/validation/cats/
+        - data/validation/dogs/
+Role: This structure is required by the training script to label the images correctly.
+
+STEP 1: Training the Brain
+File: train_model.py
+Role: Run this to process the dataset and train the CNN. 
+Output: Generates a 'cat_dog_model.pth' (PyTorch format).
+
+STEP 2: Optimization for Speed
+File: export_onnx.py
+Role: Run this to convert the heavy .pth model into a lightweight format.
+Output: Generates 'models/cat_dog_model.onnx'.
+
+STEP 3: Quality Assurance
+File: test_onnx.py
+Role: Run this to verify the .onnx model works correctly and gives 
+      accurate predictions before building the UI.
+
+STEP 4: Launching the Interface (Development)
+File: app_onnx.py
+Role: Run this to open the Dark-Mode GUI and test the "Upload" 
+      functionality within your Python environment.
+
+STEP 5: Final Production & Packaging
+Command: python -m PyInstaller --noconfirm --onedir --windowed --name "PetClassifierAI" --add-data "models;models" --icon="favicon.ico" app_onnx.py
+Role: Run this in the terminal to bundle everything into a standalone package.
+
+STEP 6: The Final Product
+Path: dist/PetClassifierAI/PetClassifierAI.exe
+Role: This is your finished software. You can now share the 
+      'PetClassifierAI' folder with anyone on Windows.

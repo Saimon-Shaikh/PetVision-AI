@@ -1,0 +1,51 @@
+PETVISION-AI: PROJECT DEVELOPMENT CHRONOLOGY
+============================================
+
+This document outlines the step-by-step process of how this project was 
+conceived, developed, and deployed.
+
+PHASE 1: ENVIRONMENT & DATA ARCHITECTURE
+----------------------------------------
+1. Initialize Project: Created the root directory 'cat_dog_classifier'.
+2. Virtual Environment: Set up a Python venv to keep dependencies isolated.
+3. Folder Creation (The First Step): Created the 'data/' directory.
+   - Inside 'data/', created 'train/' and 'validation/'.
+   - Inside each of those, created 'cats/' and 'dogs/' folders.
+4. Data Population: Loaded 34,000+ images into these specific directories.
+
+PHASE 2: THE BRAIN (MODEL DEVELOPMENT)
+--------------------------------------
+5. Scripting Logic: Wrote 'data_loader.py' to handle image transformations.
+6. Architecture: Wrote 'model_builder.py' to define the CNN layers.
+7. Training: Wrote and executed 'trainer.py' (or 'train_model.py').
+   - Result: Saved the weights as 'cat_dog_model.pth'.
+
+PHASE 3: OPTIMIZATION & REFACTORING
+-----------------------------------
+8. Conversion: Created 'export_onnx.py' to convert the PyTorch model.
+   - Purpose: To remove the 1GB PyTorch dependency for the final app.
+   - Output: Created 'models/cat_dog_model.onnx'.
+9. Verification: Developed 'test_onnx.py' to ensure the optimized model 
+   remained accurate (99%).
+
+PHASE 4: USER INTERFACE (GUI)
+-----------------------------
+10. Frontend Design: Developed 'app_onnx.py'.
+    - Implemented Dark Mode styling.
+    - Added image preview functionality and confidence score bars.
+11. Branding: Created 'app_icon.ico' to give the software a professional look.
+
+PHASE 5: DEPLOYMENT & DOCUMENTATION
+-----------------------------------
+12. Clean up: Created '.gitignore' to prevent uploading the massive 'data/' 
+    folder to GitHub.
+13. Dependency Mapping: Generated 'requirements.txt' for other developers.
+14. Packaging: Used PyInstaller to bundle everything into the 'dist/' folder.
+    - Final Output: A standalone 'PetClassifierAI.exe'.
+15. README: Finalized the documentation with Mermaid flowcharts and 
+    file dictionaries.
+
+============================================
+Project Completed: December 2025
+Developer: Saimon Shaikh
+Email Id: saimonshaikh1234@gmail.com
